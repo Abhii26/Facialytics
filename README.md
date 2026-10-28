@@ -13,18 +13,34 @@ Detect multiple faces from a live webcam, identify people from a configured refe
 ![face-api.js](https://img.shields.io/badge/face--api.js-Browser%20AI-673AB7)
 ![HTTPS](https://img.shields.io/badge/Local%20Server-HTTPS-0A8A63?logo=letsencrypt&logoColor=white)
 ![License](https://img.shields.io/badge/License-ISC%20(metadata)-blue)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?logo=vercel&logoColor=white)](https://facialytics.vercel.app/)
 
-**[Explore the workflow](#how-it-works)** · **[View screenshots](#application-preview)** · **[Run locally](#getting-started)** · **[Understand the architecture](#system-architecture)**
+**[🚀 Launch Live Demo](https://facialytics.vercel.app/)** · **[Explore the workflow](#how-it-works)** · **[View screenshots](#application-preview)** · **[Run locally](#getting-started)** · **[Understand the architecture](#system-architecture)**
 
 </div>
 
 ---
 
+## 🚀 Live Demo — Vercel
+
+**Facialytics is available online:** **[https://facialytics.vercel.app/](https://facialytics.vercel.app/)**
+
+Open the live application in a camera-enabled browser to explore the real-time face detection, facial expression analysis, multiple-face overlays, and reference-image matching experience.
+
+**Try the demo:**
+
+1. Open the **[Facialytics Live Demo](https://facialytics.vercel.app/)**.
+2. Allow the browser to access your camera when prompted.
+3. Wait for the face detection and recognition models to load.
+4. Position one or more faces within the camera view to see the live overlay, recognition labels, and expression estimates.
+
+> **Demo notes:** Browser camera access requires permission and a secure context (HTTPS). Results depend on lighting, camera quality, browser compatibility, and the preconfigured reference-image gallery. This is a portfolio demonstration, not a security-grade biometric verification system.
+
 ## Project overview
 
 **Facialytics** demonstrates how to combine a live camera stream with deep-learning models running in the browser. After the user grants camera access, the app detects faces, predicts expression categories, estimates age and gender, and compares face descriptors with a small set of reference images to display a known person's label or an **unknown** result.
 
-The **Node.js/Express backend serves files over local HTTPS**. Face detection, inference, comparison, and canvas rendering happen in the **browser**, using a bundled `face-api.js` library and pre-trained models from `public/models/`. There is no database, login flow, or server-side recognition API in the uploaded implementation.
+In local development, the **Node.js/Express backend serves files over HTTPS**; a **[hosted demo is also available on Vercel](https://facialytics.vercel.app/)**. Face detection, inference, comparison, and canvas rendering happen in the **browser**, using a bundled `face-api.js` library and pre-trained models from `public/models/`. There is no database, login flow, or server-side recognition API in the uploaded implementation.
 
 > **Project scope:** This is an educational and portfolio computer-vision prototype, not an identity-verification, biometric security, or emotion-assessment product. Predicted expressions and demographic attributes are estimates and can be inaccurate.
 
@@ -63,9 +79,11 @@ Screenshots included with this repository (click to open the full image on GitHu
 | **Repeated analysis** | A detection pass is scheduled every **200 ms**; actual throughput depends on hardware and inference time. |
 | **Local HTTPS development** | Express serves the app using an HTTPS key/certificate pair generated separately. |
 
-**Not currently implemented:** uploading an image through the UI, registering identities through an enrollment form, saving recognition events, database-backed galleries, authentication, or hosted deployment. These are possible future extensions—not current features.
+**Not currently implemented in the provided source:** uploading an image through the UI, registering identities through an enrollment form, saving recognition events, database-backed galleries, or authentication. The project now has a **[hosted demo](https://facialytics.vercel.app/)**; these additional features remain possible future extensions.
 
 ## System architecture
+
+The architecture below shows the app's browser-side inference pipeline and the Express-based **local development server**. The public demo is hosted separately on **[Vercel](https://facialytics.vercel.app/)**.
 
 ```mermaid
 flowchart LR
@@ -194,6 +212,8 @@ Face_Recognition-main/
 
 ## Getting started
 
+**Fastest option:** Open the **[live web demo](https://facialytics.vercel.app/)** and allow webcam permissions. The following instructions are for running the source locally.
+
 ### Prerequisites
 
 - **Node.js and npm** installed.
@@ -201,7 +221,7 @@ Face_Recognition-main/
 - A modern browser with webcam support (such as Chrome, Edge, or Firefox).
 - A working webcam and permission to use it.
 
-> **Important:** The uploaded ZIP does **not** contain the HTTPS certificate files expected by `server.js`. You must generate them locally before starting the server.
+> **Local setup note:** The uploaded source ZIP does **not** contain the HTTPS certificate files expected by `server.js`. Generate these when running the local server. To try the app without local setup, use the **[live Vercel demo](https://facialytics.vercel.app/)**.
 
 ### 1. Get the project
 
@@ -330,7 +350,7 @@ The `dotenv` package is installed, but `server.js` does not currently load a `.e
 - No automated tests: `npm test` currently contains the package's placeholder failing command.
 - No measured accuracy, threshold tuning study, or performance benchmark.
 - The fixed **720 × 580** video element and absolute-positioned canvas have not been implemented as a responsive design system.
-- The local HTTPS server requires filesystem certificate files, so this is **not directly deployable as-is** to static hosting or typical serverless functions.
+- The checked-in local HTTPS server relies on filesystem certificate files. The **[Vercel demo](https://facialytics.vercel.app/)** is a separate hosted deployment; the local server configuration should not be assumed to be directly portable to every static or serverless platform.
 - Recognition depends on preconfigured face images and network-accessible static assets; the particle visual effect uses an external CDN.
 
 ## Roadmap
@@ -343,7 +363,8 @@ The `dotenv` package is installed, but `server.js` does not currently load a `.e
 - [ ] Improve loading states and camera/model error feedback.
 - [ ] Add automated tests, code formatting, and CI checks.
 - [ ] Document recognition accuracy, speed, and limitations using an appropriately consented test dataset.
-- [ ] Prepare a deployment-safe demo without exposing private reference photos or development TLS keys.
+- [x] Publish a browser-accessible demo on **[Vercel](https://facialytics.vercel.app/)**.
+- [ ] Review hosted reference-image visibility and ensure private photos or development TLS keys are never deployed.
 
 ## Contributing
 
