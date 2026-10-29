@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="430" viewBox="0 0 1440 430" role="img" aria-labelledby="title description">
+  <title id="title">Facialytics Studio — Every face. A new perspective.</title>
+  <desc id="description">A dark editorial banner with lime facial contours, the Facialytics wordmark, and a browser computer vision tagline.</desc>
+  <defs>
+    <radialGradient id="halo"><stop stop-color="#a8d177" stop-opacity=".14"/><stop offset="1" stop-color="#0b0e11" stop-opacity="0"/></radialGradient>
+    <linearGradient id="line"><stop stop-color="#d8f99c" stop-opacity="0"/><stop offset=".5" stop-color="#d8f99c" stop-opacity=".75"/><stop offset="1" stop-color="#d8f99c" stop-opacity="0"/></linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#1c2428" stroke-width=".6"/></pattern>
+  </defs>
+  <rect width="1440" height="430" rx="24" fill="#0b0e11"/>
+  <rect x=".5" y=".5" width="1439" height="429" rx="23.5" fill="none" stroke="#2a3437"/>
+  <rect x="865" y="1" width="574" height="428" rx="24" fill="url(#grid)"/>
+  <ellipse cx="1130" cy="222" rx="350" ry="290" fill="url(#halo)"/>
+  <g font-family="'Segoe UI',Arial,sans-serif">
+    <circle cx="59" cy="57" r="4" fill="#d8f99c"/>
+    <text x="74" y="62" font-family="Consolas,monospace" font-size="12" letter-spacing="3" fill="#d8f99c">COMPUTER VISION, MADE VISIBLE</text>
+    <text x="54" y="166" font-size="86" font-weight="650" letter-spacing="-5" fill="#f3f4ee">facialytics<tspan fill="#d8f99c">.</tspan></text>
+    <text x="59" y="223" font-family="Georgia,serif" font-size="37" font-style="italic" fill="#d8f99c">A new perspective on every face.</text>
+    <text x="60" y="268" font-size="17" fill="#a0a8ac">Live landmarks. Deliberate matching. In your browser.</text>
+    <g font-family="Consolas,monospace" font-size="11" letter-spacing="1.1">
+      <rect x="58" y="322" width="164" height="36" rx="7" fill="#182019" stroke="#394b2b"/>
+      <text x="76" y="345" fill="#d8f99c">WEBASSEMBLY + CPU</text>
+      <rect x="235" y="322" width="156" height="36" rx="7" fill="#141a1e" stroke="#303c43"/>
+      <text x="254" y="345" fill="#c4b7ed">TWO WORKER PATHS</text>
+      <rect x="404" y="322" width="146" height="36" rx="7" fill="#141a1e" stroke="#303c43"/>
+      <text x="421" y="345" fill="#bfc9cd">STUDIO / 02.4</text>
+    </g>
+  </g>
+  <g transform="translate(972 51)" fill="none" stroke="#d8f99c" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="160" cy="167" rx="141" ry="151" stroke-opacity=".11"/>
+    <ellipse cx="160" cy="167" rx="167" ry="101" transform="rotate(-24 160 167)" stroke-opacity=".11"/>
+    <path d="M69 93C75 35 117 20 158 22C213 23 249 60 251 115L242 215L222 261L196 294L160 318L123 294L96 259L77 212Z" stroke-opacity=".65" stroke-width="1.6"/>
+    <path d="M69 93L103 79L158 62L211 82L251 115M77 143L111 130L159 115L210 130L248 151M77 187L111 171L159 158L213 176L244 194M84 229L124 211L159 216L200 214L234 237M108 274L145 253L179 252L214 274M123 294L160 281L196 294M103 79L111 130L111 171L124 211L145 253L160 318M211 82L210 130L213 176L200 214L179 252L160 318M158 22L158 62L159 115L159 158L159 216L160 281M69 93L111 130L77 187L124 211L108 274M251 115L210 130L244 194L200 214L214 274" stroke-opacity=".25" stroke-width="1.05"/>
+    <path d="M94 130L111 121L135 128L139 138L115 143L99 139ZM181 136L194 124L219 124L232 135L212 142L192 143ZM155 139L144 190L160 201L178 189M119 237L141 228L161 234L184 228L207 238L182 252L157 255L135 248Z" stroke-opacity=".9" stroke-width="1.55"/>
+    <path d="M84 114L107 103L132 108M187 108L216 101L238 114M119 237L157 241L207 238" stroke-opacity=".5"/>
+    <path d="M29 53V31H51M269 31H291V53M29 287V309H51M269 309H291V287" stroke-opacity=".65" stroke-width="1.5"/>
+    <path d="M24 168H296" stroke="url(#line)"/>
+    <g fill="#d8f99c" stroke="none">
+      <circle cx="158" cy="22" r="3"/><circle cx="103" cy="79" r="2.2"/><circle cx="211" cy="82" r="2.2"/><circle cx="111" cy="130" r="3"/><circle cx="210" cy="130" r="3"/><circle cx="159" cy="158" r="3"/><circle cx="124" cy="211" r="2.4"/><circle cx="200" cy="214" r="2.4"/><circle cx="157" cy="241" r="3"/><circle cx="160" cy="281" r="2.6"/><circle cx="160" cy="318" r="3"/>
+    </g>
+  </g>
+  <text x="1050" y="400" fill="#89967e" font-family="Consolas,monospace" font-size="10" letter-spacing="2">BUILD / MEASURE / EXPLAIN</text>
+</svg>
